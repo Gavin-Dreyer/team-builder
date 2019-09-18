@@ -6,7 +6,7 @@ import Team from './components/Team'
 import TeamForm from './components/TeamForm'
 
 const FormStyle = styled.div`
-  font-size: 3rem;
+  font-size: 2rem;
 `;
 
 function App() {
@@ -16,7 +16,18 @@ function App() {
     name: 'Gavin',
     email: '123@gmail.com',
     role: 'web dev'
-  }])
+  }, {id: 2,
+  name: 'Gavin',
+  email: '123@gmail.com',
+  role: 'web dev'}, {
+    id: 3,
+    name: 'Gavin',
+    email: '123@gmail.com',
+    role: 'web dev'
+  }, {id: 4,
+  name: 'Gavin',
+  email: '123@gmail.com',
+  role: 'web dev'}])
 
   const addNewTeam = teams => {
     const newTeam = {
@@ -31,8 +42,8 @@ function App() {
 
   return (
     <FormStyle className="App">
-      <Team team={team}/>
       <TeamForm addNewTeam={addNewTeam}/>
+      <Team team={team}/>
     </FormStyle>
   );
 }
